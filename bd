@@ -1,0 +1,45 @@
+create database CPRecarga;
+use CPRecarga;
+
+create table jugador(
+  id int auto_increment primary key,
+  nombre varchar(100),
+  edad int,
+  fecha date,
+  saldo double
+);
+
+INSERT INTO jugador(nombre, edad, fecha, saldo) VALUES 
+('Roger Gómez',34,'2012-1-01',0),
+('Ruth Tarqui',22,'2012-1-01', 0),
+('Antonio Torres',55,'2012-1-01',0);
+
+create table recarga(
+  id int auto_increment primary key,
+  idJugador int,
+  banco varchar(100),
+  medio varchar(100),
+  fecha date,
+  monto double
+);
+
+/*INSERT INTO recarga(idJugador, banco, medio, fecha, monto) VALUES 
+(1,'BCP','WhatsApp','2012-1-01',10.6),
+(2,'Interbank','WhatsApp','2012-1-02', 10.0),
+(3,'BCP','Telegram','2012-1-03',18.0),
+(4,'Interbank','Telegram','2012-1-05',18.0);
+*/
+create table incidencia(
+  id int auto_increment primary key,
+  motivo int,
+  usuario varchar(100),
+  fecha date,
+  monto double
+);
+/*
+INSERT INTO incidencia(motivo, usuario, fecha, monto) VALUES 
+(1,'usuario@gmail.com','2012-1-01',50),
+(2,'admin@gmail.com','2012-1-02', 10),
+(3,'admin@gmail.com','2012-1-03',18),
+(4,'usuario@gmail.com','2012-1-05',18);
+*/
